@@ -1,0 +1,38 @@
+<%
+=begin%>
+ <p style="color: green"><%= notice %></p>
+
+<%= render @project %>
+
+<div>
+  <%= link_to "Edit this project", edit_project_path(@project) %> |
+  <%= link_to "Back to projects", projects_path %>
+
+  <%= button_to "Destroy this project", @project, method: :delete %>
+</div> 
+<%
+=end%>
+
+
+<p style="color: green"><%= notice %></p>
+
+
+
+<div>
+  <strong>Title:</strong>
+  <%= sanitize @project.title %>
+</div>
+
+
+<div>
+  <strong>Description:</strong>
+  <%= sanitize @project.description %>
+</div>
+
+<div>
+  <%= link_to "Edit this project", edit_project_path(@project) %> |
+  <%= link_to "Back to projects", projects_path %>
+
+  <%= button_to "Destroy this project", @project, method: :delete %>
+</div>
+

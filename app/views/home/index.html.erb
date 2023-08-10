@@ -1,0 +1,15 @@
+<h1>Welcome to MyBaseCamp!</h1>
+<p>Please click on the Projects link to see the available projects</p>
+<% if user_signed_in? %>
+
+<%= link_to "Projects", projects_path, class: "btn btn-success"%>
+<% else %>
+<%= link_to "Sign Up", new_user_registration_path, class: "button"%>
+<%= link_to "Sign In", new_user_session_path, class: "button"%>
+
+
+<% end %>
+
+</br/></br>
+<%= image_tag "basecamp.png" %>
+
