@@ -1,0 +1,14 @@
+<h1>Edit User Role</h1>
+
+<%= form_for(@user, url: admin_user_role_path(@user), method: :patch) do |f| %>
+  <div class="field">
+    <%= f.label :role %>
+    <%= f.select :role, User.roles.keys %> <!-- Assuming you're using an enum for roles -->
+  </div>
+  
+  <div class="actions">
+    <%= f.submit 'Update Role' %>
+  </div>
+<% end %>
+
+<%= link_to 'Back to List', admin_user_roles_path %>

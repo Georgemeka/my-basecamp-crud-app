@@ -2,6 +2,11 @@ Rails.application.routes.draw do
   resources :projects
   devise_for :users
  
+namespace :admin do
+  resources :user_roles, only: [:index, :edit, :update]
+end
+
+
 
 devise_scope :user do  
    get '/users/sign_out' => 'devise/sessions#destroy'     
